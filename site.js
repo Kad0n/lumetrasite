@@ -6,20 +6,20 @@
 // Screenshots of the app are not in these pools.
 const POOLS = {
   hero: [
-    { src: "img/hero_6888.jpg", alt: "A lit capitol dome at blue hour between dark trees, under heavy cloud.", cap: "EOS R50 · ISO 640 · 1/60 s · f/2 · 85 mm" },
-    { src: "img/hero_6916.jpg", alt: "Long-exposure light trails on a curving divided highway at night.", cap: "EOS R50 · ISO 100 · 13 s · f/14 · 70 mm" },
-    { src: "img/hero_6919.jpg", alt: "Red and white light trails sweeping along a highway at night, street lamps over a grass median.", cap: "EOS R50 · ISO 100 · 13 s · f/14 · 70 mm" },
-    { src: "img/hero_6882.jpg", alt: "A white dome and its gilded statue against a deep blue evening sky.", cap: "EOS R50 · ISO 1000 · 1/200 s · f/2 · 85 mm" },
-    { src: "img/hero_6879.jpg", alt: "The top of a capitol dome with a gold statue, against a saturated blue sky.", cap: "EOS R50 · ISO 1250 · 1/200 s · f/2 · 85 mm" },
+    { src: "img/hero_6888.jpg", alt: "A lit capitol dome at blue hour between dark trees, under heavy cloud.", cap: "EOS R50 · ISO 640 · 1/60 s · f/2 · 85 mm · Rendered in Lumetra" },
+    { src: "img/hero_6916.jpg", alt: "Long-exposure light trails on a curving divided highway at night.", cap: "EOS R50 · ISO 100 · 13 s · f/14 · 70 mm · Rendered in Lumetra" },
+    { src: "img/hero_6919.jpg", alt: "Red and white light trails sweeping along a highway at night, street lamps over a grass median.", cap: "EOS R50 · ISO 100 · 13 s · f/14 · 70 mm · Rendered in Lumetra" },
+    { src: "img/hero_6882.jpg", alt: "A white dome and its gilded statue against a deep blue evening sky.", cap: "EOS R50 · ISO 1000 · 1/200 s · f/2 · 85 mm · Rendered in Lumetra" },
+    { src: "img/hero_6879.jpg", alt: "The top of a capitol dome with a gold statue, against a saturated blue sky.", cap: "EOS R50 · ISO 1250 · 1/200 s · f/2 · 85 mm · Rendered in Lumetra" },
   ],
   plate: [
-    { src: "img/plate_6837.jpg", alt: "A capitol dome in late golden light behind trees, an old neon sign to the left.", cap: "EOS R50 · ISO 160 · 1/1250 s · f/4 · 85 mm" },
-    { src: "img/plate_cali_0736.jpg", alt: "A wide river under blue sky with snow-capped mountains in the distance.", cap: "EOS R50 camera JPEG · ISO 100 · 1/320 s · f/9 · 26 mm" },
-    { src: "img/plate_cali_0202.jpg", alt: "Surf breaking against low sandstone cliffs along a coastline.", cap: "EOS R50 camera JPEG · ISO 100 · 1/320 s · f/10 · 18 mm" },
-    { src: "img/plate_cali_0536.jpg", alt: "A view from wooded hills over a hazy bay and distant city under cloud.", cap: "EOS R50 camera JPEG · ISO 100 · 1/320 s · f/9 · 27 mm" },
-    { src: "img/plate_4291.jpg", alt: "Rolling green hills and a red farmstead under cumulus clouds.", cap: "EOS R50 · ISO 400 · 1/500 s · f/9 · 85 mm" },
-    { src: "img/plate_4442.jpg", alt: "A wide lake with a pine shoreline under a blue sky with clouds.", cap: "EOS R50 · ISO 125 · 1/500 s · f/8 · 85 mm" },
-    { src: "img/plate_3166.jpg", alt: "A city skyline across flat lake water under an overcast sky.", cap: "EOS R50 · ISO 100 · 1/320 s · f/9 · 37 mm" },
+    { src: "img/plate_6837.jpg", alt: "A capitol dome in late golden light behind trees, an old neon sign to the left.", cap: "EOS R50 · ISO 160 · 1/1250 s · f/4 · 85 mm · Rendered in Lumetra" },
+    { src: "img/plate_3130.jpg", alt: "A river skyline of glass towers and a construction crane under an overcast sky.", cap: "EOS R50 · ISO 100 · 1/400 s · f/8 · 18 mm · Rendered in Lumetra" },
+    { src: "img/plate_4646.jpg", alt: "A calm blue lake with a dark pine shoreline under a clear sky.", cap: "EOS R50 · ISO 320 · 1/500 s · f/16 · 85 mm · Rendered in Lumetra" },
+    { src: "img/plate_4697.jpg", alt: "A straight two-lane road running between tall pines under white clouds.", cap: "EOS R50 · ISO 1250 · 1/2000 s · f/11 · 85 mm · Rendered in Lumetra" },
+    { src: "img/plate_4291.jpg", alt: "Rolling green hills and a red farmstead under cumulus clouds.", cap: "EOS R50 · ISO 400 · 1/500 s · f/9 · 85 mm · Rendered in Lumetra" },
+    { src: "img/plate_4442.jpg", alt: "A wide lake with a pine shoreline under a blue sky with clouds.", cap: "EOS R50 · ISO 125 · 1/500 s · f/8 · 85 mm · Rendered in Lumetra" },
+    { src: "img/plate_3166.jpg", alt: "A city skyline across flat lake water under an overcast sky.", cap: "EOS R50 · ISO 100 · 1/320 s · f/9 · 37 mm · Rendered in Lumetra" },
   ],
 };
 
