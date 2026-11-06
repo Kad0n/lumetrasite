@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("lumetra-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumetra</title>
+<meta name="description" content="Lumetra is a RAW editor for Canon photographers, written in Rust. Free and open source.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=28">
+</head>
+<body>
+
+<header class="mast">
+  <a class="wordmark" href="#top">Lumetra<span class="dot">.</span></a>
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#workflow">Workflow</a>
+    <a href="#speed">Speed</a>
+    <a href="#gpu">GPU</a>
+    <a href="#faq">FAQ</a>
+    <a class="get" href="#download">Download</a>
+    <button class="theme" type="button" aria-label="Switch to dark mode"><span class="theme-dot" aria-hidden="true"></span></button>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- Opening -->
+<section class="hero">
+  <img class="hero-img" data-pool="hero" src="img/hero_6888.jpg" width="2400" height="1600" alt="">
+  <div class="hero-shade"></div>
+  <div class="hero-text">
+    <p class="kicker">For Canon CR3 · CR2 · CRW</p>
+    <h1>Lumetra is a RAW editor<br>built for <span class="hl">speed</span><span class="blink">.</span></h1>
+    <p class="lede">A custom engine written in Rust, with the precision of Canon's own software. Free and open source.</p>
+    <a class="btn" href="#download">Coming soon</a>
+  </div>
+  <p class="hero-cap" data-cap="hero"></p>
+</section>
+
+<!-- Overview -->
+<section id="overview" class="block overview">
+  <div class="grid">
+    <h2 class="c-head">One window for the whole job.</h2>
+    <div class="c-body">
+      <p>Lumetra opens a card or a folder of Canon RAW files, lets you sort and rate them,
+        develop them with the controls Canon shooters already know, and send them out as
+        JPEG, TIFF, HEIF or prints. The grid and the editor are two modes of the same window,
+        so moving between them never reloads anything.</p>
+      <p>Underneath is Lumetra's own engine, written in Rust: CR3 decoding, demosaicing,
+        colour and tone, lens correction, noise reduction. It reproduces Canon's processing
+        exactly. The same settings give the same file as Digital Photo Professional&nbsp;4, byte
+        for byte, and a change shows in about a tenth of a second.</p>
+    </div>
+  </div>
+  <figure class="shot shot-edit">
+    <img src="img/edit.jpg" width="2250" height="1258" alt="Lumetra's edit mode: a river skyline photo on the left, histogram and tone curve palette on the right.">
+  </figure>
+</section>
+
+<!-- Workflow -->
+<section id="workflow" class="block workflow">
+  <div class="sec-head"><h2>Workflow.</h2></div>
+
+  <div class="row">
+    <article class="stage">
+      <span class="stage-n">01</span>
+      <h3>Cull</h3>
+      <p>Thumbnails come straight from the previews inside each RAW file, so a folder of twelve
+        fresh CR3s fills in 0.13&nbsp;s. Rate, reject and mark from the keyboard.</p>
+      <ul>
+        <li>RAW and same-name JPEG/HEIF shown as one picture</li>
+        <li>Collections across folders</li>
+        <li>Rename by template, with sidecars and a one-step undo</li>
+        <li>Quick check and side-by-side compare of up to four pictures</li>
+      </ul>
+    </article>
+    <figure class="media"><img src="img/library.jpg" width="1330" height="420" alt="Lumetra's library: sort and filter bar above a row of city thumbnails." class="ui"></figure>
+  </div>
+
+  <div class="row flip">
+    <article class="stage">
+      <span class="stage-n">02</span>
+      <h3>Develop</h3>
+      <p>The palette follows Canon's: brightness, white balance, Picture Styles, contrast,
+        highlight and shadow, a per-channel tone curve, Auto Lighting Optimizer and the
+        eight-axis colour adjustment.</p>
+      <ul>
+        <li>Lens distortion, vignetting and chromatic aberration from lensfun</li>
+        <li>Crop with aspect presets, straighten, vertical and horizontal perspective</li>
+        <li>Dust delete and copy stamp</li>
+        <li>Neural-network noise reduction on the raw mosaic, 0.45&nbsp;s on a GPU</li>
+        <li>JPEG and TIFF files edited with the same tone and colour tools</li>
+      </ul>
+    </article>
+    <figure class="media"><img data-pool="plate" src="img/plate_6837.jpg" width="2000" height="1333" alt=""><figcaption data-cap="plate"></figcaption></figure>
+  </div>
+
+  <div class="row">
+    <article class="stage">
+      <span class="stage-n">03</span>
+      <h3>Beyond one frame</h3>
+      <p>Brackets, bursts and Dual Pixel files are first-class, not exports to another program.</p>
+      <ul>
+        <li>HDR from a bracket, aligned and deghosted, with tone-mapping presets</li>
+        <li>Multiple exposure: add, average, weighted, lighten, darken</li>
+        <li>Focus stacking from a focus bracket</li>
+        <li>RAW burst rolls: save chosen frames as standalone CR3s, bit for bit</li>
+        <li>Dual Pixel RAW: micro-adjustment, bokeh shift, ghosting reduction</li>
+      </ul>
+    </article>
+    <figure class="media"><img data-pool="plate" src="img/plate_cali_0736.jpg" width="2000" height="1333" alt=""><figcaption data-cap="plate"></figcaption></figure>
+  </div>
+
+  <div class="row flip">
+    <article class="stage">
+      <span class="stage-n">04</span>
+      <h3>Deliver</h3>
+      <p>Exports run in a queue in the background while you keep working.</p>
+      <ul>
+        <li>JPEG, TIFF 8/16-bit, PNG, HEIF 8 and 10-bit, HDR HEIF in BT.2020 PQ</li>
+        <li>CMYK TIFF and JPEG through any ICC profile, soft proofing with gamut warning</li>
+        <li>Prints and contact sheets with captions</li>
+        <li>IPTC title, keywords, creator and location written into every export</li>
+      </ul>
+    </article>
+    <figure class="media"><img data-pool="plate" src="img/plate_4291.jpg" width="2000" height="1333" alt=""><figcaption data-cap="plate"></figcaption></figure>
+  </div>
+</section>
+
+<!-- Speed -->
+<section id="speed" class="block speed">
+  <div class="sec-head">
+    <h2>Against the industry standard.</h2>
+    <p>Canon's Digital Photo Professional&nbsp;4 is the reference for Canon RAW files. Same machine, same files.</p>
+  </div>
+  <div class="grid big-numbers">
+    <div><span class="big">7.7×</span><span class="what-n">faster batch export<br>12 files: 29 s against 224 s</span></div>
+    <div><span class="big">4–7×</span><span class="what-n">faster preview after a slider change<br>61–103 ms against 444–455 ms</span></div>
+  </div>
+  <div class="grid charts">
+    <article class="chart-block">
+      <h3>Preview after one slider change</h3>
+      <p>Milliseconds. Brightness and contrast edits on 24&nbsp;MP files, each a dot.</p>
+      <div class="chart" id="chart-redraw" role="img" aria-label="Strip plot of redraw times: DPP 444 to 455 ms, Lumetra 61 to 103 ms"></div>
+    </article>
+    <article class="chart-block">
+      <h3>Twelve full-size JPEGs</h3>
+      <p>Seconds from start to the last file written. 6000 × 3368, EOS R50.</p>
+      <div class="chart" id="chart-batch" role="img" aria-label="Bar chart: DPP 4 224 s, Lumetra 29 s"></div>
+    </article>
+  </div>
+</section>
+
+<!-- GPU -->
+<section id="gpu" class="gpu">
+  <div class="gpu-inner">
+    <h2>You have a GPU.<br>Why not <span class="o">use it.</span></h2>
+    <div class="gpu-grid">
+      <p class="gpu-lede">Lumetra splits the work by what it needs. Anything that has to match to
+        the byte runs in exact integer maths. Everything that doesn't runs on your graphics card,
+        through compute shaders on DirectX&nbsp;12 or Vulkan, with the CPU as a fallback.</p>
+      <div class="gpu-stat">
+        <span class="big">25×</span>
+        <span class="what-n">neural-network noise reduction on a 24&nbsp;MP raw file<br>0.45 s on the GPU against 11.5 s on the CPU</span>
+      </div>
+    </div>
+    <ul class="gpu-list">
+      <li><b>Live preview</b><span>Colour, tone, demosaic and lens correction drawn on the GPU while you edit.</span></li>
+      <li><b>Noise reduction</b><span>The neural network runs on the raw mosaic as two GPU kernels, matching the CPU result to within a millionth.</span></li>
+      <li><b>Exact where it counts</b><span>The file you export is computed precisely, so the GPU never costs you a byte.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Camera data -->
+<section class="block camera">
+  <div class="sec-head"><h2>Reads what the camera wrote.</h2></div>
+  <dl class="cam-list">
+    <div><dt>White-balance presets</dt><dd>Daylight, shade, cloudy, tungsten, fluorescent and flash use your camera's own levels from the maker notes, not a generic temperature.</dd></div>
+    <div><dt>AF points</dt><dd>Shown over the picture, red where the camera focused, on RAW files and on the camera's JPEG and HEIF.</dd></div>
+    <div><dt>Picture Style</dt><dd>The style you shot with is the starting point, including User Defined 1–3 from your camera.</dd></div>
+    <div><dt>Aspect crop</dt><dd>Shot in 16:9 or 1:1? The picture opens framed that way, with the full sensor still there.</dd></div>
+    <div><dt>Dual Pixel RAW</dt><dd>The second image inside a Dual Pixel file is read for micro-adjustment, bokeh shift and ghosting reduction.</dd></div>
+    <div><dt>Burst rolls and RAW movies</dt><dd>Every frame of a RAW burst or CRM movie can be opened, developed or saved on its own.</dd></div>
+    <div><dt>Lens</dt><dd>The lens name in the file picks its correction profile automatically.</dd></div>
+    <div><dt>Ratings</dt><dd>Ratings and rejects can go into each file's XMP, where other software reads them.</dd></div>
+  </dl>
+</section>
+
+<!-- Keys and command line -->
+<section class="block keys-cli">
+  <div class="grid">
+    <div class="keys-col">
+      <h3>Hands on the keyboard</h3>
+      <table class="keys">
+        <tr><td><kbd>G</kbd></td><td>library grid</td></tr>
+        <tr><td><kbd>E</kbd> <kbd>Enter</kbd></td><td>edit</td></tr>
+        <tr><td><kbd>0</kbd>–<kbd>5</kbd></td><td>rating</td></tr>
+        <tr><td><kbd>X</kbd></td><td>reject</td></tr>
+        <tr><td><kbd>Alt</kbd>+<kbd>1</kbd>–<kbd>5</kbd></td><td>check mark</td></tr>
+        <tr><td><kbd>F</kbd> <kbd>Z</kbd> <kbd>Shift</kbd>+<kbd>Z</kbd></td><td>fit, 100%, 200%</td></tr>
+        <tr><td><kbd>Ctrl</kbd>+<kbd>B</kbd></td><td>add to collection</td></tr>
+      </table>
+    </div>
+    <div class="cli-col">
+      <h3>Or no window at all</h3>
+      <p>Everything the app does is also a command, for scripts and batch jobs.</p>
+<pre class="cli"><code><span class="c"># a shoot to full-size JPEGs, Landscape style</span>
+lumetra-cli develop D:\Shoot\*.CR3 -o out --style landscape
+
+<span class="c"># 16-bit TIFF in Adobe RGB, keeping the recipe</span>
+lumetra-cli develop IMG_0001.CR3 -o out -f tiff16 --space adobe-rgb --save-recipe
+
+<span class="c"># HDR from a bracket, focus stack from another</span>
+lumetra-cli hdr IMG_1.CR3 IMG_2.CR3 IMG_3.CR3 -o hdr.tif
+lumetra-cli stack IMG_4.CR3 IMG_5.CR3 IMG_6.CR3 -o stack.tif
+
+<span class="c"># rename a trip by date, preview first</span>
+lumetra-cli rename D:\Trip -t "{date}_{seq:4}" --sort date</code></pre>
+    </div>
+  </div>
+</section>
+
+<figure class="bleed">
+  <img data-pool="plate" src="img/plate_3166.jpg" width="2000" height="800" alt="">
+  <figcaption data-cap="plate"></figcaption>
+</figure>
+
+<!-- Proof -->
+<section id="proof" class="block proof">
+  <div class="sec-head">
+    <h2>Proof.</h2>
+    <p>Same files, same settings: what Lumetra's engine writes is identical to Digital Photo Professional&nbsp;4's output, down to the last byte.</p>
+  </div>
+  <div class="grid">
+    <figure class="hashes" aria-label="MD5 of each export">
+      <figcaption><span>DPP 4.21</span><span>Lumetra</span></figcaption>
+      <ol id="hashlist"></ol>
+      <p class="hash-note">MD5 of twelve full-size JPEGs from the same EOS R50 files.</p>
+    </figure>
+    <div class="proof-side">
+      <table class="checks">
+        <tbody>
+          <tr><td>Portrait-orientation export</td><td class="ok">identical</td></tr>
+          <tr><td>Camera User Defined style</td><td class="ok">identical</td></tr>
+          <tr><td>JPEG, saturation 180</td><td class="ok">identical</td></tr>
+          <tr><td>JPEG, turned 90°</td><td class="ok">identical</td></tr>
+          <tr><td>Crop against DPP's full frame</td><td>0.04 / 255</td></tr>
+          <tr><td>Rating written by Lumetra, read by DPP</td><td class="ok">shown</td></tr>
+        </tbody>
+      </table>
+      <figure class="crop100">
+        <img src="img/marina100.jpg" width="1200" height="800" alt="100 percent crop of a concrete tower's scalloped balconies.">
+        <figcaption>100% crop · ISO 400 · f/18</figcaption>
+      </figure>
+    </div>
+  </div>
+  <details class="raw-data">
+    <summary>All measurements</summary>
+    <table>
+      <thead><tr><th>Measurement</th><th>DPP 4.21</th><th>Lumetra</th></tr></thead>
+      <tbody>
+        <tr><td>Preview after brightness change (6 files)</td><td>444–450 ms</td><td>61–65 ms</td></tr>
+        <tr><td>Preview after contrast change</td><td>447–455 ms</td><td>72–103 ms</td></tr>
+        <tr><td>First preview render, 2400 px</td><td>457–469 ms</td><td>86–94 ms</td></tr>
+        <tr><td>12 full-size JPEGs</td><td>224.1 s</td><td>29.0 s</td></tr>
+        <tr><td>Folder of 12 unseen CR3s to thumbnails</td><td>—</td><td>0.13 s</td></tr>
+        <tr><td>Launch to main window</td><td>1.4–1.8 s</td><td>2.5–2.8 s</td></tr>
+      </tbody>
+    </table>
+    <p>i9-10900K, 20 threads, RTX 5060 Ti, Windows 10, copies of EOS R50 files on a SATA SSD,
+      5 November 2026. DPP timed through its own engine library per call; Lumetra through
+      scripted UI runs and its command line.</p>
+  </details>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="block faq">
+  <div class="sec-head"><h2>Questions.</h2></div>
+  <div class="faq-list">
+    <details open><summary>Does it change my RAW files?</summary>
+      <p>No. Edits live in a small sidecar file next to each picture. Lumetra writes into a RAW
+        only when you ask it to: saving settings into the file the way Canon's software does, or
+        with ratings-in-file switched on.</p></details>
+    <details><summary>Which cameras?</summary>
+      <p>Canon CR3, CR2 and CRW files. It has been developed and checked on EOS R50 and R50 V
+        files, with EOS R5 and R7 samples for Dual Pixel RAW.</p></details>
+    <details><summary>Do I need Digital Photo Professional?</summary>
+      <p>No. Lumetra is its own program with its own engine. It matches DPP&nbsp;4's output to the
+        byte without needing DPP installed.</p></details>
+    <details><summary>Mac or Linux?</summary>
+      <p>Windows 10 and 11 for now.</p></details>
+    <details><summary>What does it cost?</summary>
+      <p>Nothing. Lumetra is open source under the LGPL-2.1-or-later.</p></details>
+    <details><summary>When can I get it?</summary>
+      <p>It isn't released yet. The installer and the source will be linked here.</p></details>
+  </div>
+</section>
+
+<!-- Download -->
+<section id="download" class="block download">
+  <h2>Not out yet.<br><span class="soft">Stay tuned.</span></h2>
+  <div class="dl-row">
+    <div class="dl-item"><span class="dl-k">Windows installer</span><span class="dl-v">coming soon</span></div>
+    <div class="dl-item"><span class="dl-k">Source on GitHub</span><span class="dl-v">coming soon</span></div>
+  </div>
+  <p class="disclaimer">Lumetra is an independent project, not made, endorsed or supported by Canon. Digital Photo Professional is Canon's software.</p>
+</section>
+
+</main>
+
+<footer class="foot">
+  <span class="wordmark small">Lumetra<span class="dot">.</span></span>
+  <span>LGPL-2.1-or-later</span>
+</footer>
+
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<script src="site.js?v=28"></script>
+</body>
+</html>
